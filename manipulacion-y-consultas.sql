@@ -66,12 +66,32 @@ ORDER BY rating
 
 /* 1. Mostrar los títulos de las primeras tres películas en la base de datos. */
 
+SELECT title FROM movies
+LIMIT 3
+
 /* 2. Mostrar el top 5 de las películas con mayor rating. */
+
+SELECT title, rating FROM movies
+ORDER BY rating DESC
+LIMIT 5
+
 
 /* 3. Mostrar las top 5 a 10 de las películas con mayor rating. */
 
-/* 4. Listar los primeros 10 actores (sería la página 1).
-a. Luego, usar offset para traer la página 3. */
+SELECT title, rating FROM movies
+ORDER BY rating DESC
+LIMIT 5
+OFFSET 5
+
+/* 4. Listar los primeros 10 actores (sería la página 1). */
+SELECT * FROM actors
+LIMIT 10
+
+/* a. Luego, usar offset para traer la página 3. */
+
+SELECT * FROM actors
+LIMIT 10
+OFFSET 30
 
 
 
