@@ -93,12 +93,19 @@ SELECT * FROM actors
 LIMIT 10
 OFFSET 30
 
-
-
 /* Micro desafío - Paso 4: */
 
 /* 1. Mostrar el título y rating de todas las películas cuyo título sea Harry Potter. */
 
+SELECT title, rating FROM movies
+WHERE title LIKE "Harry Potter%"
+
 /* 2. Mostrar a todos los actores cuyos nombres empiecen con Sam. */
 
+SELECT first_name, last_name FROM actors
+WHERE first_name LIKE "Sam%"
+
 /* 3. Mostrar el título de las películas que salieron entre el 2004 y 2008. */
+
+SELECT title, release_date FROM movies
+WHERE release_date BETWEEN "2004-01-01" AND "2008-01-01"
